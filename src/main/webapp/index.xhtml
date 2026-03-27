@@ -9,6 +9,7 @@
 
 <h:head>
     <title>TP0 chat</title>
+    <h:outputStylesheet name="css/style.css" />
 </h:head>
 
 <h:body>
@@ -27,6 +28,8 @@
         <br></br>
 
         <!-- Question -->
+        <h:outputLabel value="Question :" />
+        <br/>
         <h:inputTextarea value="#{chatBean.question}" cols="50" rows="3"/>
         <br/><br/>
 
