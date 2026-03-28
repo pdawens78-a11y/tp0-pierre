@@ -15,19 +15,53 @@ import java.util.Locale;
 public class Modificateur implements Serializable { // Car CDI peut mettre l'instance en mémoire secondaire.
     /**
      * Modificateur de question.
-     * @param question La question à modifier.
+     *
+     * @param question    La question à modifier.
      * @param roleSysteme Le rôle système à utiliser pour la modification de la question.
      * @return La question modifiée : le rôle système en majuscule au début de la question, s'il n'est pas null,
      * suivi d'un saut de ligne,
      * puis la question en minuscule, le tout entouré de "||".
      */
     public String modifier(String question, String roleSysteme) {
-        String resultat = "||";
-        if (roleSysteme != null) {
-            // Ajouter le rôle système en majuscule au début du résultat, suivi d'un saut de ligne.
-            resultat += roleSysteme.toUpperCase(Locale.FRENCH) + "\n";
+
+        String roleLower = roleSysteme.toLowerCase();
+
+        // Assistant
+        if (roleLower.contains("assistant")) {
+            return "Bonne question ! Votre question est : \""
+                    + question + "\".\n\n"
+                    + "Voici une réponse simple : cela dépend du contexte, mais ce sujet peut être mieux compris "
+                    + "en analysant ses éléments principaux en profondeur.";
         }
-        resultat += question.toLowerCase(Locale.FRENCH) + "||";
-        return resultat;
+
+        // Traducteur
+        if (roleLower.contains("traducteur anglais-français")) {
+            return "Voici une traduction de votre texte :\n\n\""
+                    + question + "\"\n\n"
+                    + "|| " + "Traduction simulée : "
+                    + new StringBuilder(question).reverse().toString() + " ||"
+                    + "\n\n(Note : ceci est une simulation pour illustrer le traitement.)";
+        }
+
+        // Guide touristique
+        if (roleLower.contains("guide touristique")) {
+            return "Excellente idée de s’intéresser à \"" + question + "\" !\n\n"
+                    + "Si vous prévoyez de visiter cet endroit, je vous conseille de prendre le temps "
+                    + "de découvrir les lieux incontournables, goûter à la cuisine locale et échanger "
+                    + "avec les habitants.\n\n"
+                    + "C’est souvent comme ça qu’on découvre les meilleures expériences.";
+        }
+
+        // Par défaut
+        return "Je vais traiter votre demande simplement : "
+                + question.toUpperCase();
+
+//        String resultat = "||";
+//        if (roleSysteme != null) {
+//            // Ajouter le rôle système en majuscule au début du résultat, suivi d'un saut de ligne.
+//            resultat += roleSysteme.toUpperCase(Locale.FRENCH) + "\n";
+//        }
+//        resultat += question.toLowerCase(Locale.FRENCH) + "||";
+//        return resultat;
     }
 }
