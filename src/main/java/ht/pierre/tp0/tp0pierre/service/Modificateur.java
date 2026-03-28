@@ -35,7 +35,7 @@ public class Modificateur implements Serializable { // Car CDI peut mettre l'ins
         }
 
         // Traducteur
-        if (roleLower.contains("traducteur anglais-français")) {
+        if (roleLower.contains("traducteur"))  {
             return "Voici une traduction de votre texte :\n\n\""
                     + question + "\"\n\n"
                     + "|| " + "Traduction simulée : "
@@ -44,7 +44,7 @@ public class Modificateur implements Serializable { // Car CDI peut mettre l'ins
         }
 
         // Guide touristique
-        if (roleLower.contains("guide touristique")) {
+        if (roleLower.contains("guide")) {
             return "Excellente idée de s’intéresser à \"" + question + "\" !\n\n"
                     + "Si vous prévoyez de visiter cet endroit, je vous conseille de prendre le temps "
                     + "de découvrir les lieux incontournables, goûter à la cuisine locale et échanger "

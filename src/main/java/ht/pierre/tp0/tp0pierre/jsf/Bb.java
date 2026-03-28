@@ -180,14 +180,14 @@ public class Bb implements Serializable {
                     If the user type an English text, you translate it into French.
                     If the text contains only one to three words, give some examples of usage of these words in English.
                     """;
-            this.listeRolesSysteme.add(new SelectItem(role, "Traducteur Anglais-Français"));
+            this.listeRolesSysteme.add(new SelectItem(role, "Traducteur"));
 
             role = """
                     Your are a travel guide. If the user type the name of a country or of a town,
                     you tell them what are the main places to visit in the country or the town
                     are you tell them the average price of a meal.
                     """;
-            this.listeRolesSysteme.add(new SelectItem(role, "Guide touristique"));
+            this.listeRolesSysteme.add(new SelectItem(role, "Guide"));
         }
 
         return this.listeRolesSysteme;
