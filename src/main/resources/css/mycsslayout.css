@@ -1,0 +1,41 @@
+/* Layout général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Alignement en haut */
+.topAligned {
+    vertical-align: top;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    resize: vertical;
+    padding: 5px;
+}
+
+/* Boutons */
+button, input[type="submit"] {
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+}
+
+.topAligned {
+    vertical-align: top;
+}
+
+textarea {
+    width: 100%;
+}
+
+button {
+    margin-left: 5px;
+}

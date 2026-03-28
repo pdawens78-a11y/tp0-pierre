@@ -1,0 +1,9 @@
+Explication du message d’erreur affiché :
+
+Le message d’erreur affiché est : « Il manque le texte de la question ».
+
+Ce message est déclenché lorsque l’utilisateur soumet le formulaire sans saisir de texte dans le champ « question ».
+Dans le backing bean, une validation est effectuée afin de vérifier si la variable question est nulle ou vide (méthode isBlank()).
+
+Si cette condition est vérifiée, un objet FacesMessage est ajouté au contexte JSF. Cela permet d’afficher un message d’erreur à l’utilisateur sur l’interface.
+Par ailleurs, le traitement est interrompu (retour de null), ce qui empêche la génération d’une réponse et maintient l’utilisateur sur la même page.

@@ -3,9 +3,11 @@ package ht.pierre.tp0.tp0pierre.jsf;
 import jakarta.faces.view.ViewScoped;
 import jakarta.inject.Named;
 
+import java.io.Serializable;
+
 @Named
 @ViewScoped
-public class Utilisateur {
+public class Utilisateur implements Serializable  {
     private String nom;
     public String getNom() {
         return nom;
