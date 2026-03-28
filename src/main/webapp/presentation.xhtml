@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="jakarta.faces.html">
+<h:head>
+    <title>Présentation</title>
+</h:head>
+<h:body>
+    <h3>Présentation</h3>
+    <h:form>
+        Nom : <h:inputText value="#{utilisateur.nom}"/>
+        <h:commandButton value="Enregistrer" action="#{utilisateur.direHello()}"/>
+    </h:form>
+</h:body>
+</html>
+
+
+
+
+
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<!DOCTYPE html>-->
+<!--<html lang="en"-->
+<!--      xmlns="http://www.w3.org/1999/xhtml"-->
+<!--      xmlns:h="jakarta.faces.html"-->
+<!--      xmlns:p="http://primefaces.org/ui"-->
+<!--      xmlns:f="jakarta.faces.core"-->
+<!--      >-->
+
+<!--<h:head>-->
+<!--    <title>TP0 chat</title>-->
+<!--</h:head>-->
+
+<!--<h:body>-->
+<!--    <h:form>-->
+<!--        <h3>Chat simple</h3>-->
+
+<!--         &lt;!&ndash; Choix du rôle &ndash;&gt;-->
+<!--        <p:selectOneMenu value = "#{chatBean.role}">-->
+<!--            <f:selectItem itemLabel="Choisir un rôle" itemValue="" />-->
+<!--            <f:selectItem itemLabel="Assistant" itemValue="assistant" />-->
+<!--            <f:selectItem itemLabel="Traducteur" itemValue="traducteur" />-->
+<!--            <f:selectItem itemLabel="Guide touristique" itemValue="guide" />-->
+
+<!--        </p:selectOneMenu>-->
+
+<!--        <br></br>-->
+
+<!--        &lt;!&ndash; Question &ndash;&gt;-->
+<!--        <h:outputLabel value="Question :" />-->
+<!--        <br/>-->
+<!--        <h:inputTextarea value="#{chatBean.question}" cols="50" rows="3"/>-->
+<!--        <br/><br/>-->
+
+<!--        &lt;!&ndash; Bouton envoyer &ndash;&gt;-->
+<!--        <h:commandButton value="Envoyer" action="#{chatBean.envoyer}" />-->
+
+<!--        <br/><br/>-->
+
+<!--        &lt;!&ndash; Réponse &ndash;&gt;-->
+<!--        <h:outputLabel value="Réponse :" />-->
+<!--        <br/>-->
+<!--        <h:inputTextarea value="#{chatBean.reponse}" readonly="true" cols="50" rows="3"/>-->
+
+<!--        <br/><br/>-->
+
+<!--        &lt;!&ndash; Historique &ndash;&gt;-->
+<!--        <h:outputLabel value="Historique :" />-->
+<!--        <br/>-->
+<!--        <h:inputTextarea value="#{chatBean.conversation}" readonly="true" cols="50" rows="6"/>-->
+
+
+<!--    </h:form>-->
+<!--</h:body>-->
+<!--</html>-->
